@@ -29,6 +29,20 @@
 ## Market survey
 
 * 800app
+* [Phpscriptsonline][2]---Class Scheduling Management System ($450)
+	- track student and teacher info
+	- managing classrooms
+	- student billing
+	- tracking outstanding lessons
+* [EdSys][1].
+	- Mobile app
+	- lesson plans
+	- mark attendance
+	- check daily sessions by subject
+	- special events
+
+[1]: https://www.edsys.in/time-table-management/
+[2]: https://www.phpscriptsonline.com/product/class-scheduling-management-system/
 
 ## References
 
