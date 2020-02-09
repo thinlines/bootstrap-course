@@ -1,19 +1,16 @@
 {
-  "name": "npm-test",
+  "name": "confusion",
   "version": "1.0.0",
-  "description": "test dir to leran git/node",
+  "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server"
   },
-  "keywords": [
-    "fuck-yeah"
-  ],
-  "author": "randy",
-  "license": "WTFPL",
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.3.0"
   }
 }
