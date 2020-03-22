@@ -231,16 +231,7 @@
                         <img class="d-block img-fluid"
                              src="img/uthappizza.png" alt="uthappizza">
                         <div class="carousel-caption d-none d-md-block">
-                            <h2>
-                                Uthappizza
-                                <span class="badge badge-danger">
-                                    HOT
-                                </span>
-                                <span class="badge badge-pill
-                                             badge-secondary">
-                                    $4.99
-                                </span>
-                            </h2>
+                            <h2> Uthappizza <span class="badge badge-danger"> HOT </span> <span class="badge badge-pill badge-secondary"> $4.99 </span> </h2>
                             <p>A unique combination of Indian Uthappam
                             (pancake) and Italian pizza, topped with
                             Cerignola olives, ripe vine cherry tomatoes,
@@ -253,8 +244,7 @@
                             alt="buffet"
                             class="d-block img-fluid">
                         <div class="carousel-caption d-none d-md-block">
-                            <h2>Weekend Grand Buffet <span class="badge
-                            badge-danger">NEW</span></h2>
+                            <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
                             <p>Featuring mouthwatering combinations with a choice
                             of five different salads, six enticing appetizers,
                             six main entrees and five choicest desserts. Free
@@ -277,26 +267,21 @@
                             experiences.</p>
                         </div>
                     </div>
-                </div>
-                <ol class="carousel-indicators">
-                    <li data-target="#mycarousel" data-slide-to="0" class="active"> </li>
-                    <li data-target="#mycarousel" data-slide-to="1"> </li>
-                    <li data-target="#mycarousel" data-slide-to="2"> </li>
-                </ol>
-                <a class="carousel-control-prev" href="#mycarousel"
-                   role="button" data-slide="previous">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#mycarousel"
-                   role="button" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-                <div class="btn-group" id="carouselButton">
-                    <button class="btn btn-danger btn-small" id="carousel-pause">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"> </li>
+                        <li data-target="#mycarousel" data-slide-to="1"> </li>
+                        <li data-target="#mycarousel" data-slide-to="2"> </li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel"
+                       role="button" data-slide="previous">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel"
+                       role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    <button class="btn btn-danger btn-small" id="carouselButton">
                         <span class="fa fa-pause"></span>
-                    </button>
-                    <button class="btn btn-danger btn-small" id="carousel-play">
-                        <span class="fa fa-play"></span>
                     </button>
                 </div>
             </div>
@@ -351,14 +336,19 @@
 <script>
     $(document).ready(function(){
         $('#mycarousel').carousel({ interval:2000 });
-        $('#carousel-pause').click(function(){
-            $('#mycarousel').carousel('pause');
-        });
-        $('#carousel-play').click(function(){
-            $('#mycarousel').carousel('cycle');
+        $('#carouselButton').click(function(){
+            if($('#carouselButton').children('span').hasClass('fa-pause')){
+                $('#mycarousel').carousel('pause');
+                $('#carouselButton').children('span').removeClass('fa-pause');
+                $('#carouselButton').children('span').addClass('fa-play');
+            }
+            else if($('#carouselButton').children('span').hasClass('fa-play')){
+                $('#mycarousel').carousel('cycle');
+                $('#carouselButton').children('span').addClass('fa-pause');
+                $('#carouselButton').children('span').removeClass('fa-play');
+            }
         });
     });
 </script>
 </body>
-
 </html>

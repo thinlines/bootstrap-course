@@ -61,7 +61,6 @@ body {
 #carouselButton {
 	right: 0px;
 	bottom: 0px;
-	padding: inherit;
 	position: absolute;
 	z-index: 1;
 }
