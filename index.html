@@ -277,12 +277,12 @@
                             experiences.</p>
                         </div>
                     </div>
-                    <ol class="carousel-indicators">
-                        <li data-target="#mycarousel" data-slide-to="0" class="active"> </li>
-                        <li data-target="#mycarousel" data-slide-to="1"> </li>
-                        <li data-target="#mycarousel" data-slide-to="2"> </li>
-                    </ol>
                 </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"> </li>
+                    <li data-target="#mycarousel" data-slide-to="1"> </li>
+                    <li data-target="#mycarousel" data-slide-to="2"> </li>
+                </ol>
                 <a class="carousel-control-prev" href="#mycarousel"
                    role="button" data-slide="previous">
                     <span class="carousel-control-prev-icon"></span>
@@ -291,6 +291,14 @@
                    role="button" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
+                <div class="btn-group" id="carouselButton">
+                    <button class="btn btn-danger btn-small" id="carousel-pause">
+                        <span class="fa fa-pause"></span>
+                    </button>
+                    <button class="btn btn-danger btn-small" id="carousel-play">
+                        <span class="fa fa-play"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -340,6 +348,17 @@
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#mycarousel').carousel({ interval:2000 });
+        $('#carousel-pause').click(function(){
+            $('#mycarousel').carousel('pause');
+        });
+        $('#carousel-play').click(function(){
+            $('#mycarousel').carousel('cycle');
+        });
+    });
+</script>
 </body>
 
 </html>
